@@ -1,6 +1,6 @@
 package Test;
 
-public class WildAnimals extends AnimalsNames {
+public class WildAnimals extends AnimalsNames implements ToRunAway {
     protected int power;
     protected int numKick;
 
@@ -24,5 +24,12 @@ public class WildAnimals extends AnimalsNames {
 
     public void setNumKick(int numKick) {
         this.numKick = 0;
+    }
+
+    @Override
+    public void toRun() {
+        System.out.println("Фермер прогнал " + name);
+        numKick +=1;
+        System.out.println(name + " прогнан с фермы: " + numKick + " раз");
     }
 }

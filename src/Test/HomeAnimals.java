@@ -1,5 +1,9 @@
 package Test;
 
+import org.w3c.dom.ls.LSOutput;
+
+import javax.sound.midi.Soundbank;
+
 public class HomeAnimals extends AnimalsNames {
     protected int health;
     protected int resource;
@@ -28,5 +32,9 @@ public class HomeAnimals extends AnimalsNames {
     }
 
 
+    public void toEat() {
+            health += 1;
+        System.out.println(name + " health (после кормления): " +  health);
 
+    }
 }

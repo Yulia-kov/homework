@@ -1,5 +1,5 @@
 package Test;
 
 public interface ToKickOut {
-    void toKick(WildAnimals enemy);
+    void toKick(ToRunAway enemy);
 }

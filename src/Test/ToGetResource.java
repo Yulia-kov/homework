@@ -1,5 +1,5 @@
 package Test;
 
 public interface ToGetResource {
-    void toGetRes();
+    void toGetRes(ToGiveResource enemy);
 }

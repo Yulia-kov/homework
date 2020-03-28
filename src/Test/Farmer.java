@@ -2,8 +2,12 @@ package Test;
 
 import java.util.Random;
 
-public class Farmer implements ToGetResource, ToEatAnimalFarmer, ToKickOut, ToFeedAnimal {
+public class Farmer implements ToGetResource, ToEatAnimalFarmer, ToKickOut {
     protected int farmerResource;
+
+    public Farmer(int farmerResource) {
+        this.farmerResource = farmerResource;
+    }
 
     public int getFarmerResource() {
         return farmerResource;
@@ -14,35 +18,22 @@ public class Farmer implements ToGetResource, ToEatAnimalFarmer, ToKickOut, ToFe
         this.farmerResource = 5;
     }
 
+
+
+
+    @Override
+    public void toGetRes(ToGiveResource enemy) {
+        enemy.beGiven();
+
+    }
+
     @Override
     public void toEatF(ToBeEatableByFarmer enemy) {
-farmerResource = farmerResource + ;
-
-    }
-
-
-    @Override
-    public void Feed() {
-        for (int i = 0; i < ; i++) {
-
-        }
+        enemy.beEatableF();
     }
 
     @Override
-    public void toGetRes() {
-
-    }
-
-    @Override
-    public void toKick(WildAnimals enemy) {
-        Random random = new Random();
-        random.nextBoolean();
-        if ( random == true) {
-            enemy.numKick +=1;
-            if (enemy.numKick = 3) {
-
-            }
-        }
-
+    public void toKick(ToRunAway enemy) {
+enemy.toRun();
     }
 }

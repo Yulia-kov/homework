@@ -1,4 +1,4 @@
-package Converter;
+package converter;
 
 public class Rankine extends BaseConverter implements Convert, GetConverted {
     protected double tempR;

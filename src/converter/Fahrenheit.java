@@ -1,4 +1,4 @@
-package Converter;
+package converter;
 
 public class Fahrenheit extends BaseConverter implements Convert, GetConverted {
     protected double tempF;

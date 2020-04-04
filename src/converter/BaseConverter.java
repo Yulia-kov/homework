@@ -1,4 +1,4 @@
-package Converter;
+package converter;
 
 public class BaseConverter implements GetConverted, Convert {
     protected double tempC;
